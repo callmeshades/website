@@ -7,6 +7,6 @@
 ])
 <a href="{{ $link }}" class="bg-gray-800 rounded-lg overflow-hidden">
     <div class="relative h-48">
-        <img src="{{ $image }}" alt="">
+        <img src="{{ $image }}" alt="Featured image for {{ $title }}" class="w-full object-cover object-center">
     </div>
 </a>
