@@ -1,13 +1,14 @@
 <x-layouts.main class="pt-20">
     <x-home.header
         name="Brandon Nilsson"
-        description="I live building things and teaching"
         :image="Vite::asset('resources/images/brandon.jpg')"
         location="Grande Prairie, Alberta, Canada"
-    />
+    >
+        A full-stack developer based in Grande Prairie, Alberta, Canada. I specialize in building web applications with Laravel and Django. Currently, I'm employed as a software developer and community manager at OG Technologies.
+    </x-home.header>
 
     <x-container>
-        <x-home.divider class="pb-10" />
+        <x-divider class="pb-10" />
 
         <x-home.projects-title
             title="All Projects"

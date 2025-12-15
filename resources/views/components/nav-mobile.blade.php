@@ -27,11 +27,8 @@
         x-transition:leave-end="opacity-0 scale-90 -translate-y-10"
     >
         <div class="relative w-full">
-            <x-nav-link href="#" class="w-full inline-block">
-                Blog
-            </x-nav-link>
-            <x-nav-link href="#" class="w-full inline-block">
-                About
+            <x-nav-link :href="route('resume')" class="w-full inline-block">
+                Resume
             </x-nav-link>
         </div>
     </div>

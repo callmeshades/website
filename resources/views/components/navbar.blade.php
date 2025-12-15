@@ -50,11 +50,8 @@
                             </div>
                         </x-nav-link>
                     </x-nav-dropdown>
-                    <x-nav-link link="#">
-                        Blog
-                    </x-nav-link>
-                    <x-nav-link link="#">
-                        About
+                    <x-nav-link :href="route('resume')">
+                        Resume
                     </x-nav-link>
                 </nav>
             </div>
