@@ -22,7 +22,7 @@
         </div>
         <div class="px-3 pb-4 flex flex-wrap items-center gap-3">
             @foreach($tags as $tag)
-                <x-project-tag :tag="$tag" />
+                <x-project-tag :name="$tag->name" :hex_color="$tag->hex_color" />
             @endforeach
         </div>
     </div>
