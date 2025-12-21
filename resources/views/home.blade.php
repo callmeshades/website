@@ -20,7 +20,7 @@
                 <x-home.project-card
                     :title="$project->title"
                     :description="$project->description"
-                    :tags="[]"
+                    :tags="$project->tags"
                     :image="$project->featured_image"
                     :href="route('projects.show', $project)"
                 />

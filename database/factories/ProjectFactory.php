@@ -26,7 +26,7 @@ class ProjectFactory extends Factory
             'title' => fake()->jobTitle(),
             'slug' => fake()->slug(),
             'featured_image' => $image_faker->imageUrl(1280, 720),
-            'description' => fake()->paragraph(),
+            'description' => fake()->paragraph(1),
             'body' => $this->faker->markdown()
         ];
     }
