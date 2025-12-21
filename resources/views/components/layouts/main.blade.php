@@ -11,7 +11,7 @@
 </head>
 <body class="bg-gray-900">
 <x-navbar/>
-<div {{ $attributes->merge(['class']) }}>
+<div {{ $attributes->merge(['class' => '']) }}>
     {{ $slot }}
 </div>
 @livewireScripts

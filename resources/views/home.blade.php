@@ -12,16 +12,19 @@
 
         <x-home.projects-title
             title="All Projects"
-            count="10"
+            :count="$projects_count"
         />
 
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-6">
-            <x-home.project-card
-                title="OrderMerch"
-                description="OrderMerch is a service I created and run by myself. The backend is created with Django and DRF. The front end uses Next.js and the app front end uses Sveltekit. The reason for separating the two is because Sveltekit works better with Fabricjs which I started using for the designer. The service is mostly automated once a client is set up and integrated with the API. Merchandise is sent to and fulfilled by suppliers via rest APIs. I can provide snippets for the codebase upon request."
-                :tags="[]"
-                :image="Vite::asset('resources/images/ordermerch.jpg')"
-            />
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-6 gap-3">
+            @foreach ($projects as $project)
+                <x-home.project-card
+                    :title="$project->title"
+                    :description="$project->description"
+                    :tags="[]"
+                    :image="$project->featured_image"
+                    :href="route('projects.show', $project)"
+                />
+            @endforeach
         </section>
     </x-container>
 </x-layouts.main>
