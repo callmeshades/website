@@ -19,7 +19,7 @@ class ProjectForm
                 TextInput::make('title')
                     ->required(),
                 FileUpload::make('featured_image')
-                    ->directory('projects')
+                    ->directory(join('/', ['projects', 'featured']))
                     ->disk('s3_public')
                     ->image()
                     ->required(),
