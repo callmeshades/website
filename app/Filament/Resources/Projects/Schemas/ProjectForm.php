@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Projects\Schemas;
 
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
@@ -22,7 +23,7 @@ class ProjectForm
                     ->required(),
                 TextInput::make('description')
                     ->required(),
-                Textarea::make('body')
+                MarkdownEditor::make('body')
                     ->required()
                     ->columnSpanFull(),
             ]);
