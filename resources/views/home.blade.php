@@ -15,7 +15,7 @@
             :count="$projects_count"
         />
 
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-6 gap-3">
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-6 gap-5">
             @foreach ($projects as $project)
                 <x-home.project-card
                     :title="$project->title"
