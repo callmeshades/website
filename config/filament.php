@@ -117,4 +117,6 @@ return [
 
     'system_route_prefix' => 'filament',
 
+    'path' => env('ADMIN_PANEL_PATH', 'admin')
+
 ];
