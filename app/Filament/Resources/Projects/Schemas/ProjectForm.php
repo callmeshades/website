@@ -24,6 +24,9 @@ class ProjectForm
                 TextInput::make('description')
                     ->required(),
                 MarkdownEditor::make('body')
+                    ->disableToolbarButtons([
+                        'attachFiles'
+                    ])
                     ->required()
                     ->columnSpanFull(),
             ]);
