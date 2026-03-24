@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Project;
+use App\Actions\ReadAllProjects;
+use Cache;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,12 +14,18 @@ class HomeController extends Controller
     public function __invoke(Request $request)
     {
         /**
-         * Get all projects
+         * Cache all projects for 15 minutes
          */
-        $projects = Project::get();
+        $projects = Cache::remember('all_projects', 15, function () {
+            /**
+             * Get all projects
+             */
+            return (new ReadAllProjects)->execute();
+        });
 
-        $projects_count = Project::count();
-
-        return view('home', compact('projects', 'projects_count'));
+        return view('home', [
+            'projects' => $projects,
+            'projects_count' => $projects->count(),
+        ]);
     }
 }

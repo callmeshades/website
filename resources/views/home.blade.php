@@ -18,11 +18,11 @@
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-6 gap-5">
             @foreach ($projects as $project)
                 <x-home.project-card
-                    :title="$project->title"
-                    :description="$project->description"
-                    :tags="$project->tags"
-                    :image="$project->featured_image"
-                    :href="route('projects.show', $project)"
+                    :title="$project['matter']['title']"
+                    :description="$project['matter']['description']"
+                    :tags="$project['matter']['tags']"
+                    :image="$project['matter']['featured_image']"
+                    :href="route('projects.show', $project['matter']['slug'])"
                 />
             @endforeach
         </section>

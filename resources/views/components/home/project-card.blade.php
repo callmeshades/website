@@ -9,11 +9,7 @@
     <div class="z-[1] relative flex flex-col justify-between bg-gray-800 h-full rounded-lg overflow-hidden duration-200 group-hover:-translate-y-1 group-hover:-translate-x-1">
         <div>
             <div class="relative h-32">
-                @if(App::isProduction())
-                    <img src="{{ $image }}" alt="Featured image for {{ $title }}" class="w-full h-full object-cover object-center">
-                @else
-                    <img src="{{ $image }}" alt="Featured image for {{ $title }}" class="w-full h-full object-cover object-center">
-                @endif
+                <img src="{{ Vite::asset('resources/images/projects/' . $image) }}" alt="Featured image for {{ $title }}" class="w-full h-full object-cover object-center">
             </div>
             <div class="px-3 pt-3 pb-4">
                 <h4 class="text-xl font-bold text-gray-100 mb-3 line-clamp-1">{{ $title }}</h4>
@@ -22,9 +18,9 @@
                 </p>
             </div>
         </div>
-        <div class="px-3 pb-4 flex flex-wrap items-center gap-3">
+        <div class="px-3 pb-4 flex flex-wrap items-center gap-3 flex-wrap">
             @foreach($tags as $tag)
-                <x-project-tag :name="$tag->name" :hex_color="$tag->hex_color" />
+                <x-project-tag :name="$tag['name']" :hex_color="$tag['hex']" />
             @endforeach
         </div>
     </div>
