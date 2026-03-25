@@ -20,7 +20,12 @@ class HomeController extends Controller
             /**
              * Get all projects
              */
-            return (new ReadAllProjects)->execute();
+            $projects = (new ReadAllProjects)->execute();
+
+            /**
+             * Sort the projects by date. Show the most recent first
+             */
+            return $projects->sortBy('matter.date', descending: true);
         });
 
         return view('home', [

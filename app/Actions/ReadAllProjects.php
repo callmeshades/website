@@ -2,6 +2,7 @@
 
 namespace App\Actions;
 
+use Carbon\Carbon;
 use File;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 
@@ -25,7 +26,10 @@ class ReadAllProjects
         foreach ($files as $file) {
             $object = YamlFrontMatter::parse($file->getContents());
             $projects->push([
-                'matter' => $object->matter(),
+                'matter' => [
+                    ...$object->matter(),
+                    'date' => new Carbon($object->matter('date'))
+                ],
                 'body' => $object->body(),
             ]);
         }

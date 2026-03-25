@@ -2,6 +2,7 @@
 
 namespace App\Actions;
 
+use Carbon\Carbon;
 use File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
@@ -32,7 +33,10 @@ class ReadProjectBySlug
          * Return the project
          */
         return [
-            'matter' => $object->matter(),
+            'matter' => [
+                ...$object->matter(),
+                'date' => new Carbon($object->matter('date')),
+            ],
             'body' => $object->body(),
         ];
     }
