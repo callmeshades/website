@@ -1,6 +1,6 @@
 ---
 date: "2017-08-02"
-slug: "firstpassoilfield"
+slug: "first-pass-oilfield"
 title: "First Pass Oilfield"
 featured_image: "firstpassoilfield/header.png"
 description: "The owner of the company had specific requirements and features for their website and in the process we settled on creating a custom CMS."
