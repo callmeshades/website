@@ -25,15 +25,5 @@ class DatabaseSeeder extends Seeder
             'password' => 'password',
             'is_admin' => true
         ]);
-
-        ProjectTag::factory(10)->create();
-
-        $tags = ProjectTag::all();
-
-        Project::factory(20)->create()->each(function ($project) use ($tags) {
-            $project->tags()->attach(
-                $tags->random(rand(1, 3))->pluck('id')->toArray()
-            );
-        });
     }
 }
