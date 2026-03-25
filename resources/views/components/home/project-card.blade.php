@@ -8,8 +8,8 @@
 <a href="{{ $href }}" class="relative block group">
     <div class="z-[1] relative flex flex-col justify-between bg-gray-800 h-full rounded-lg overflow-hidden duration-200 group-hover:-translate-y-1 group-hover:-translate-x-1">
         <div>
-            <div class="relative h-32">
-                <img src="{{ Vite::asset('resources/images/projects/' . $image) }}" alt="Featured image for {{ $title }}" class="w-full h-full object-cover object-center">
+            <div class="relative h-48">
+                <img src="{{ Vite::asset('resources/images/projects/' . $image) }}" alt="Featured image for {{ $title }}" class="w-full h-full object-cover object-top">
             </div>
             <div class="px-3 pt-3 pb-4">
                 <h4 class="text-xl font-bold text-gray-100 mb-3 line-clamp-1">{{ $title }}</h4>
