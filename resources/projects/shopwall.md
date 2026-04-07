@@ -16,6 +16,7 @@ technologies:
     - "Adobe After Effects"
     - "React"
     - "TypeScript"
+    - "GraphQL"
 tags:
 - name: "Management"
   hex: "#F54927"
