@@ -1,5 +1,6 @@
-<div class="fixed z-50 top-5 inset-x-0">
-    <div class="container px-4 sm:px-6 lg:px-8 mx-auto">
+<div class="fixed z-50 inset-x-0">
+    <div class="z-0 relative container mx-auto h-6 bg-gray-900"></div>
+    <div class="z-[1] relative container px-4 sm:px-6 lg:px-8 mx-auto">
         <header class="relative flex items-center justify-between bg-gray-800 shadow-lg">
             {{-- Left Side --}}
             <div class="flex items-center">
