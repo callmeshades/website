@@ -29,7 +29,7 @@
 
         <section class="mb-10">
             <h2 class="text-white font-bold text-2xl lg:text-3xl mb-4">Description</h2>
-            <p class="text-white text-base lg:text-lg">{{ $project['matter']['description'] }}</p>
+            <p class="text-white text-base lg:text-lg">{{ $project['body'] }}</p>
         </section>
     </x-container>
 </x-layouts.main>
