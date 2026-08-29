@@ -296,7 +296,7 @@
             <x-resume.history
                 title="IT Intern"
                 company="Illuminate Technologies"
-                location="Grande Prairie"
+                location="Alberta"
                 schedule_type="Part-Time"
                 start_date="Summer 2015"
                 :description="[
