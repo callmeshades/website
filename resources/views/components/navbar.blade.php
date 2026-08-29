@@ -26,12 +26,6 @@
                         title="Links"
                         class="min-w-[150px]"
                     >
-                        <x-nav-link href="https://www.youtube.com/@brandonnilsson1358" target="_blank" class="inline-block w-full">
-                            <div class="flex items-center gap-x-2">
-                                <x-simpleicon-youtube class="w-4 h-4" />
-                                <span>YouTube</span>
-                            </div>
-                        </x-nav-link>
                         <x-nav-link href="https://github.com/callmeshades" target="_blank" class="inline-block w-full">
                             <div class="flex items-center gap-x-2">
                                 <x-simpleicon-github class="w-4 h-4" />
